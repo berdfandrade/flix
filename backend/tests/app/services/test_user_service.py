@@ -86,7 +86,7 @@ async def test_update_user_name(user_service, test_db):
 
     created = await user_service.create_user(data)
 
-    update = UserUpdate(name="Bernardo Silva", password="")
+    update = UserUpdate(name="Bernardo Silva")  # type: ignore
 
     updated = await user_service.update_user(created.id, update)
 
@@ -104,7 +104,7 @@ async def test_update_user_password(user_service, test_db):
 
     created = await user_service.create_user(data)
 
-    update = UserUpdate(name="", password="newpassword")
+    update = UserUpdate(password="newpassword")  # type: ignore
 
     updated = await user_service.update_user(created.id, update)
 
