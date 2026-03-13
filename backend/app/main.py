@@ -1,4 +1,3 @@
-import logging
 from fastapi import FastAPI
 from app.routes.health import router as health_router
 from contextlib import asynccontextmanager
