@@ -15,6 +15,8 @@ class Settings(BaseSettings):
     mongo_url: str = "mongodb://localhost:27017"
     db_name: str = "flix"
     domain: str = "http://localhost:8000"
+    bucket: str = "my-bucket"
+    region: str = "us-east-1"
 
 
 settings = Settings()
